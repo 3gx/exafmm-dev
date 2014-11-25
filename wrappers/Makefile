@@ -11,7 +11,8 @@ all:
 
 petiga:
 	make libpetiga.a
-	$(CXX) test_petiga.cxx -L. -lfmm -ltbb
+#	$(CXX) test_petiga.cxx -L. -lfmm -ltbb
+	$(CXX) test_petiga.cxx -L. -lfmm 
 	mpirun -np 2 ./a.out
 
 gromacs:
